@@ -1,0 +1,166 @@
+@import "articles.css";
+@import "forms.css";
+@import "grids.css";
+@import "components.css";
+body {
+  margin: 0px;
+  background: #f5f6f7;
+  color: #676d79;
+  font: 16px "Open Sans", sans-serif;
+}
+body * {
+  position: relative;
+  box-sizing: border-box;
+}
+body a {
+  color: #3d4449;
+  text-decoration: none;
+}
+body h1 {
+  color: #3d4449;
+  font-size: 62px;
+}
+body h4 {
+  font-weight: 400;
+}
+body img {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  height: auto;
+  transform: scale(1);
+  border-radius: 7px;
+  max-height: 100%;
+}
+body ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+body h1, body ul, body a.button, body span.block-title, body a.logo {
+  font-family: "Roboto Slab", serif;
+}
+body div.page {
+  display: flex !important;
+  flex-direction: row;
+}
+body div.page > aside {
+  max-width: 400px;
+  min-width: 400px;
+  transition: 0.4s ease-in-out;
+  z-index: 2;
+}
+body div.page > aside > div.inner {
+  background: #f5f6f7;
+}
+body div.page > main {
+  background-color: #fff;
+  padding: 80px 100px 40px;
+}
+body div.page > main > header {
+  border-bottom: 4px solid #f56a6a;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+  margin: 0px 0px 80px 0px;
+}
+body div.page > main > header a.logo {
+  font-size: 22px;
+}
+body div.page > main div.block-content {
+  margin: 40px 0px 40px 0px;
+  padding: 0px 0px 80px 0px;
+}
+body div.page > main div.block-content div.section-header {
+  margin: 10px 0px 80px 0px;
+}
+body div.page > main div.block-content:last-child {
+  border-bottom-width: 0px;
+}
+body div.page > main div.hero-block > div.section-content {
+  padding-right: 30px;
+  min-width: 40%;
+}
+body div.page > main div.hero-block > div.section-image {
+  min-width: 60%;
+}
+body div.page .inset {
+  padding: 30px;
+}
+body div.page div.block-content {
+  clear: both;
+  border-bottom: 2px solid rgba(210, 215, 217, 0.75);
+  padding-bottom: 40px;
+  display: inline-block;
+  width: 100%;
+  margin: 20px 0px 0px 0px;
+}
+body div.page.menu-hidden > aside {
+  min-width: 0px;
+  width: 0px;
+}
+body div.page.menu-hidden-hide-components > aside > div.inner {
+  display: none;
+}
+@media (max-width: 1280px) {
+  body > div.page > aside {
+    left: -400px !important;
+    position: fixed;
+    max-width: 400px;
+    width: calc(100% - 80px) !important;
+  }
+  body > div.page > main div.hero-block div.section-image {
+    min-width: 40%;
+  }
+  body > div.page.menu-hidden > aside {
+    left: 0px !important;
+  }
+  body > div.page > aside > div.inner {
+    overflow-y: auto;
+    max-height: 100vh;
+    width: initial !important;
+    position: relative !important;
+  }
+  body > div.page.menu-hidden-hide-components > aside > div.inner {
+    display: block !important;
+  }
+}
+@media screen and (orientation: portrait) {
+  body > div.page > main {
+    padding: 60px 80px 40px;
+  }
+  body > div.page div.hero-block {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 730px) {
+  body h1 {
+    font-size: 24px;
+  }
+  body > div.page main > header {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+  body > div.page main > header a.logo {
+    width: 100%;
+    padding-top: 40px;
+  }
+  body > div.page > main {
+    padding: 20px 40px 40px;
+  }
+  body > div.page a.togglemenu {
+    background-color: #e6e8e9;
+    font-size: 22px;
+    width: 60px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    top: 10px;
+    color: #7f888f;
+  }
+}
